@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 00:59:56 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/25 16:26:28 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/25 20:45:28 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,5 @@ int count_command_in_stack_b(int idx, t_linked_list *stack_b, t_moving_counter *
 t_moving_counter	*find_minimum_greedy(t_linked_list *stack_a, t_linked_list *stack_b);
 int	rotate(t_linked_list *stack_a, t_linked_list *stack_b, t_moving_counter *moving_counter);
 int	reverse_rotate(t_linked_list *stack_a, t_linked_list *stack_b, t_moving_counter *moving_counter);
+int	abs_(int inp);
 #endif
