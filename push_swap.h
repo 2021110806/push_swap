@@ -6,14 +6,14 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 00:59:56 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/22 21:56:14 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/25 16:26:28 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # include "./libft/libft.h"
-
+#include <stdio.h>
 typedef struct s_node
 {
 	struct s_node	*next;

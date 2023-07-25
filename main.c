@@ -6,12 +6,12 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 21:16:25 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/23 01:29:04 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/25 16:38:45 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+#include <stdio.h>
 int main(int argc, char *argv[])
 {
 	int				i;

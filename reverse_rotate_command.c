@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 01:55:47 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/20 02:50:44 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/23 22:49:11 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	rra(t_linked_list *stack_a)
 
 	if (!stack_a || stack_a -> size == 0 || stack_a -> size == 1)
 		return (0);
-	node = make_new_node(get_first(stack_a));
-	delete_first(stack_a);
-	add_last(stack_a, node);
+	node = make_new_node(get_last(stack_a));
+	delete_last(stack_a);
+	add_first(stack_a, node);
 	write(1,"rra\n",4);
 	return (1);
 }
@@ -31,9 +31,9 @@ int	rrb(t_linked_list *stack_b)
 
 	if (!stack_b || stack_b -> size == 0 || stack_b -> size == 1)
 		return (0);
-	node = make_new_node(get_first(stack_b));
-	delete_first(stack_b);
-	add_last(stack_b, node);
+	node = make_new_node(get_last(stack_b));
+	delete_last(stack_b);
+	add_first(stack_b, node);
 	write(1,"rrb\n",4);
 	return (1);
 }
