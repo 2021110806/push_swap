@@ -6,34 +6,11 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 22:57:27 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/27 21:01:15 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/27 21:13:14 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	is_sorted(t_linked_list *list)
-{
-	t_node	*node;
-	int		i;
-	int		ascending;
-	int		descending;
-
-	node = list -> head -> next;
-	ascending = 1;
-	descending = 1;
-	while (node != list -> head)
-	{
-		if (node -> next == list -> head)
-			break ;
-		if (node -> next -> item > node -> item)
-			descending = 0;
-		if (node -> next -> item <  node -> item)
-			ascending = 0;
-		node = node -> next;
-	}
-	return ((ascending || descending));
-}
 
 int count_command_in_stack_a(int target, t_linked_list *stack_a, t_moving_counter *moving_counter)
 {
@@ -83,19 +60,19 @@ int count_command_in_stack_a(int target, t_linked_list *stack_a, t_moving_counte
 	{
 		while (node != stack_a -> head)
 		{
-		if (node -> item == min(stack_a))
-		{
-			if (cnt < stack_a -> size / 2)
+			if (node -> item == min(stack_a))
 			{
-				moving_counter -> ra = cnt;
-				return (1);
+				if (cnt < stack_a -> size / 2)
+				{
+					moving_counter -> ra = cnt;
+					return (1);
+				}
+				else
+				{
+					moving_counter -> rra = stack_a -> size - (cnt);
+					return (1);
+				}
 			}
-			else
-			{
-				moving_counter -> rra = stack_a -> size - (cnt);
-				return (1);
-			}
-		}
 		cnt++;
 		node = node -> next;
 		}
@@ -183,14 +160,6 @@ t_moving_counter	*find_minimum_greedy(t_linked_list *stack_a, t_linked_list *sta
 	min_moving -> rra = moving_counter -> rra;
 	min_moving -> rb = moving_counter -> rb;
 	min_moving -> rrb = moving_counter -> rrb;
-	if (min_moving -> rra + min_moving -> ra + min_moving -> rb + min_moving -> rrb \
-			> moving_counter -> rra + moving_counter -> ra + moving_counter -> rb + moving_counter -> rrb)
-		{
-			min_moving -> ra = moving_counter -> ra;
-			min_moving -> rra = moving_counter -> rra;
-			min_moving -> rb = moving_counter -> rb;
-			min_moving -> rrb = moving_counter -> rrb;
-		}
 	stack_idx++;
 	node = node -> next;
 	while (node != stack_b -> head)
