@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 01:55:00 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/19 23:37:26 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/27 22:13:26 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	sa(t_linked_list *stack_a)
 	delete_last(stack_a);
 	add_last(stack_a, head_prev);
 	add_last(stack_a, head_prev_prev);
-	write(1,"sa\n",3);
+	write(1, "sa\n", 3);
 	return (1);
 }
 
@@ -42,7 +42,7 @@ int	sb(t_linked_list *stack_b)
 	delete_last(stack_b);
 	add_last(stack_b, head_prev);
 	add_last(stack_b, head_prev_prev);
-	write(1,"sb\n",3);
+	write(1, "sb\n", 3);
 	return (1);
 }
 
@@ -52,6 +52,6 @@ int	ss(t_linked_list *stack_a, t_linked_list *stack_b)
 		return (0);
 	if (!sb(stack_b))
 		return (0);
-	write(1,"ss\n",3);
+	write(1, "ss\n", 3);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 21:17:00 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/26 22:15:22 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/27 22:34:27 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-int		print_hex(unsigned long long inp, int is_uppercase);
-int		print_addr(unsigned long long inp);
-int		print_demical(int inp);
-int		print_unsigned(int inp);
-int		print_char(char inp);
-int		print_va(char identifier, va_list ap);
-int		ft_printf(const char *args, ...);
-int		deal_zero_exception(int is_addr);
-int		calc_hex(unsigned long long remained, int is_uppercase);
+int					print_hex(unsigned long long inp, int is_uppercase);
+int					print_addr(unsigned long long inp);
+int					print_demical(int inp);
+int					print_unsigned(int inp);
+int					print_char(char inp);
+int					print_va(char identifier, va_list ap);
+int					ft_printf(const char *args, ...);
+int					deal_zero_exception(int is_addr);
+int					calc_hex(unsigned long long remained, int is_uppercase);
 int					ft_isalpha(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
@@ -63,7 +63,7 @@ void				*ft_calloc(size_t count, size_t size);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char*));
 void				ft_putchar_fd(char c, int fd);
-int				ft_putstr_fd(char *s, int fd);
+int					ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 t_list				*ft_lstnew(void *content);

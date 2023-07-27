@@ -1,4 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minjeon2 <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/27 22:34:42 by minjeon2          #+#    #+#             */
+/*   Updated: 2023/07/27 22:34:44 by minjeon2         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
+
+int	error(void)
+{
+	ft_putstr_fd("Error", 1);
+	return (0);
+}
 
 int	abs_(int inp)
 {
@@ -7,13 +25,52 @@ int	abs_(int inp)
 	return (inp);
 }
 
-int move_min_value_to_top(t_linked_list *stack_a)
+int	min(t_linked_list *list)
 {
-	int 	min_value;
-	int		cnt;
-	t_node *node;
+	int		i;
+	int		min_value;
+	t_node	*node;
 
-	cnt = 0;
+	i = 0;
+	min_value = 2147483647;
+	node = list -> head;
+	node = node -> next;
+	while (i < list -> size)
+	{
+		if (node -> item < min_value)
+			min_value = node -> item;
+		i++;
+		node = node -> next;
+	}
+	return (min_value);
+}
+
+int	max(t_linked_list *list)
+{
+	int		i;
+	int		max_value;
+	t_node	*node;
+
+	i = 0;
+	max_value = -2147483648;
+	node = list -> head;
+	node = node -> next;
+	while (i < list -> size)
+	{
+		if (node -> item > max_value)
+			max_value = node -> item;
+		i++;
+		node = node -> next;
+	}
+	return (max_value);
+}
+
+int	find_distance_to_min_value(t_linked_list *stack_a)
+{
+	t_node	*node;
+	int		cnt;
+	int		min_value;
+
 	min_value = min(stack_a);
 	node = stack_a -> head -> next;
 	while (node -> item != min_value)
@@ -21,22 +78,5 @@ int move_min_value_to_top(t_linked_list *stack_a)
 		cnt++;
 		node = node -> next;
 	}
-	if (cnt < stack_a -> size / 2)
-	{
-		while (cnt)
-		{
-			ra(stack_a, 0);
-			cnt--;
-		}
-	}
-	else
-	{
-		cnt = stack_a -> size - cnt;
-		while (cnt)
-		{
-			rra(stack_a, 0);
-			cnt--;
-		}
-	}
-	return (1);
+	return (cnt);
 }

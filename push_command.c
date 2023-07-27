@@ -6,12 +6,12 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 01:56:09 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/23 23:02:25 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/27 22:45:12 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
+
 int	pa(t_linked_list *stack_a, t_linked_list *stack_b)
 {
 	t_node	*node;
