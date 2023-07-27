@@ -6,13 +6,13 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 01:55:25 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/23 22:59:33 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/27 19:31:14 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h" 
 
-int	ra(t_linked_list *stack_a)
+int	ra(t_linked_list *stack_a, int is_rr)
 {
 	t_node	*node;
 
@@ -23,11 +23,12 @@ int	ra(t_linked_list *stack_a)
 		return (0);
 	delete_first(stack_a);
 	add_last(stack_a, node);
-	write(1,"ra\n",3);
+	if (!is_rr)
+		write(1,"ra\n",3);
 	return (1);
 }
 
-int	rb(t_linked_list *stack_b)
+int	rb(t_linked_list *stack_b, int is_rr)
 {
 	t_node	*node;
 	int		item;
@@ -39,16 +40,15 @@ int	rb(t_linked_list *stack_b)
 		return (0);
 	delete_first(stack_b);
 	add_last(stack_b, node);
-	write(1,"rb\n",3);
+	if (!is_rr)
+		write(1,"rb\n",3);
 	return (1);
 }
 
 int	rr(t_linked_list *stack_a, t_linked_list *stack_b)
 {
-	if (!ra(stack_a))
-		return (0);
-	if (!rb(stack_b))
-		return (0);
+	ra(stack_a, 1);
+	rb(stack_b, 1);
 	write(1,"rr\n",3);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 00:59:56 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/25 22:58:49 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/27 19:34:06 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ int				delete_last(t_linked_list *list);
 int				delete_first(t_linked_list *list);
 int				pa(t_linked_list *stack_a, t_linked_list *stack_b);
 int				pb(t_linked_list *stack_a, t_linked_list *stack_b);
-int				ra(t_linked_list *stack_a);
-int				rb(t_linked_list *stack_b);
+int	ra(t_linked_list *stack_a, int is_rr);
+int	rb(t_linked_list *stack_b, int is_rr);
 int				rr(t_linked_list *stack_a, t_linked_list *stack_b);
-int				rrb(t_linked_list *stack_b);
-int				rra(t_linked_list *stack_a);
+int	rrb(t_linked_list *stack_b, int is_rrr);
+int	rra(t_linked_list *stack_a, int is_rrr);
 int				rrr(t_linked_list *stack_a, t_linked_list *stack_b);
 int				sa(t_linked_list *stack_a);
 int				sb(t_linked_list *stack_b);

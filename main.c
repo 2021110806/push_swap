@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 21:16:25 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/25 23:23:51 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/27 20:56:42 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,22 @@ int main(int argc, char *argv[])
 	node = stack_b -> head -> prev;
 	while (node != stack_b -> head)
 	{
+		// write(1, "==before==\n", ft_strlen("==before==\n"));
+		// write(1, "stack_a\n", ft_strlen("stack_a\n"));
+		// print_all(stack_a);
+		// write(1, "stack_b\n", ft_strlen("stack_b\n"));
+		// print_all(stack_b);
 		min_moving = find_minimum_greedy(stack_a, stack_b);
 		rotate(stack_a, stack_b, min_moving);
 		reverse_rotate(stack_a, stack_b, min_moving);
 		pa(stack_a, stack_b);
+		// write(1, "==after==\n", ft_strlen("==after==\n"));
+		// write(1, "stack_a\n", ft_strlen("stack_a\n"));
+		// print_all(stack_a);
+		// write(1, "stack_b\n", ft_strlen("stack_b\n"));
+		// print_all(stack_b);
 		node = stack_b -> head -> prev;
 	}
 	move_min_value_to_top(stack_a);
-	print_all(stack_a);
+	// print_all(stack_a);
 }

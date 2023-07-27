@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 22:13:53 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/25 16:37:13 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/27 19:43:04 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,11 +94,11 @@ int partition(t_linked_list *stack_a, t_linked_list *stack_b)
 		if (pivot_s < node -> item && node -> item <= pivot_l)
 			pb(stack_a, stack_b);
 		if (pivot_l < node -> item)
-			ra(stack_a);
+			ra(stack_a, 0);
 		if (pivot_s >= node -> item)
 		{
 			pb(stack_a, stack_b);
-			rb(stack_b);
+			rb(stack_b, 0);
 		}
 		cnt++;
 	}
