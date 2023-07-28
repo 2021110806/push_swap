@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 21:20:17 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/27 22:28:05 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 00:27:09 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	is_valid_input(char **argv, int argc, t_linked_list *stack_a)
 		return (error());
 	while (i < argc)
 	{
-		if (is_digit(argc, argv, i))
+		if (!is_digit(argc, argv, i))
 			return (error());
 		if (ft_strlen(argv[i]) > 12)
 			return (error());

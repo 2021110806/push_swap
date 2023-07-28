@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: minjeon2 <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 22:34:42 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/27 22:34:44 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 00:29:26 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ int	find_distance_to_min_value(t_linked_list *stack_a)
 	int		cnt;
 	int		min_value;
 
+	cnt = 0;
 	min_value = min(stack_a);
 	node = stack_a -> head -> next;
 	while (node -> item != min_value)

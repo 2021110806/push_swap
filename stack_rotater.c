@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 01:36:26 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/27 22:11:08 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 02:13:20 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,6 @@ int	move_min_value_to_top(t_linked_list *stack_a)
 	cnt = stack_a -> size - cnt;
 	cnt ++;
 	while (--cnt)
-	{
 		rra(stack_a, 0);
-		cnt--;
-	}
 	return (1);
 }

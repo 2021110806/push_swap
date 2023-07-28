@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 22:13:53 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/27 22:45:03 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 00:30:54 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,6 @@ int	partition(t_linked_list *stack_a, t_linked_list *stack_b)
 		}
 		cnt++;
 	}
+	move_nodes_over_pivot_l(stack_a, stack_b);
 	return (1);
 }

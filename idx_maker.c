@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 22:57:40 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/27 22:43:49 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 00:23:01 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	sort(int *arr, int size)
 	return (1);
 }
 
-int	match_idx_witch_contents(t_linked_list	*list, int *dct)
+int	match_idx_with_contents(t_linked_list	*list, int *dct)
 {
 	t_node	*node;
 	int		i;
@@ -57,6 +57,7 @@ int	match_idx_witch_contents(t_linked_list	*list, int *dct)
 		}
 		node = node -> next;
 	}
+	return (1);
 }
 
 int	make_stack_to_idx(t_linked_list *list)

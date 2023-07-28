@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 21:16:25 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/27 22:35:05 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 01:55:16 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int argc, char *argv[])
 	node = stack_b -> head -> prev;
 	while (node != stack_b -> head)
 	{
-		min_moving = find_minimum_greedy(stack_a, stack_b);
+		find_minimum_greedy(stack_a, stack_b, min_moving);
 		rotate(stack_a, stack_b, min_moving);
 		reverse_rotate(stack_a, stack_b, min_moving);
 		pa(stack_a, stack_b);
