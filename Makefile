@@ -6,12 +6,12 @@
 #    By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/16 17:01:59 by minjeon2          #+#    #+#              #
-#    Updated: 2023/07/29 03:48:52 by minjeon2         ###   ########.fr        #
+#    Updated: 2023/07/29 05:16:38 by minjeon2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS = -g
+CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
 LIBFT = ./libft/libft.a
 LIBFT_DIR = libft

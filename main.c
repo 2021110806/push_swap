@@ -6,12 +6,11 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 21:16:25 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 03:36:33 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 05:18:37 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 int	main(int argc, char *argv[])
 {
@@ -39,6 +38,5 @@ int	main(int argc, char *argv[])
 		node = stack_b -> head -> prev;
 	}
 	move_min_value_to_top(stack_a);
-	system("leaks push_swap");
-	return (0);
+	exit(0);
 }

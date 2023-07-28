@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 22:13:53 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 00:30:54 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 05:17:08 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int	move_nodes_over_pivot_l(t_linked_list *stack_a, t_linked_list *stack_b)
 	node = stack_a -> head -> next;
 	while (node != stack_a -> head)
 	{
+		node = stack_a -> head -> next;
 		pb(stack_a, stack_b);
-		node = node -> next;
 	}
 	return (1);
 }
@@ -51,15 +51,14 @@ int	partition(t_linked_list *stack_a, t_linked_list *stack_b)
 	pivot_s = (min(stack_a) + max(stack_a)) / 3;
 	pivot_l = (min(stack_a) + max(stack_a)) / 3 * 2;
 	cnt = 0;
-	node = stack_a -> head -> next;
 	while (stack_a -> size > size_of_over_pivot_l(stack_a, pivot_l))
 	{
 		node = stack_a -> head -> next;
 		if (pivot_s < node -> item && node -> item <= pivot_l)
 			pb(stack_a, stack_b);
-		if (pivot_l < node -> item)
+		else if (pivot_l < node -> item)
 			ra(stack_a, 0);
-		if (pivot_s >= node -> item)
+		else if (pivot_s >= node -> item)
 		{
 			pb(stack_a, stack_b);
 			rb(stack_b, 0);

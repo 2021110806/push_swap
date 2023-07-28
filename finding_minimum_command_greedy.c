@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 22:57:27 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 03:38:44 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 05:21:32 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,15 @@ t_moving_counter *moving_counter)
 	return (1);
 }
 
+void	update_moving_counter(\
+t_moving_counter *min_moving, t_moving_counter *moving_counter)
+{
+	min_moving -> ra = moving_counter -> ra;
+	min_moving -> rra = moving_counter -> rra;
+	min_moving -> rb = moving_counter -> rb;
+	min_moving -> rrb = moving_counter -> rrb;
+}
+
 void	find_minimum_greedy(t_linked_list *stack_a, \
 t_linked_list *stack_b, t_moving_counter *min_moving)
 {
@@ -92,16 +101,9 @@ t_linked_list *stack_b, t_moving_counter *min_moving)
 		count_command_in_stack_a(node -> item, stack_a, moving_counter);
 		count_command_in_stack_b(stack_idx, stack_b, moving_counter);
 		if (sum_moving_counter(min_moving) > sum_moving_counter(moving_counter))
-		{
-			t_moving_counter *tmp;
-			tmp = min_moving;
-			min_moving -> ra = moving_counter -> ra;
-			min_moving -> rra = moving_counter -> rra;
-			min_moving -> rb = moving_counter -> rb;
-			min_moving -> rrb = moving_counter -> rrb;
-			free(min_moving);
-		}
+			update_moving_counter(min_moving, moving_counter);
 		node = node -> next;
 		stack_idx++;
 	}
+	free(moving_counter);
 }

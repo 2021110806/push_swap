@@ -6,12 +6,11 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 01:10:51 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/27 22:20:59 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 04:00:03 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 t_linked_list	*make_new_list(void)
 {
