@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 21:16:25 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 06:28:08 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 08:34:59 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,17 @@ int	main(int argc, char *argv[])
 		return (1);
 	if (is_sorted(stack_a))
 		return (0);
+	if (argc > 1 && argc <= 6)
+		return (sort_when_input_is_few(stack_a, stack_b));
 	make_stack_to_idx(stack_a);
 	partition(stack_a, stack_b);
 	node = stack_b -> head -> prev;
 	while (node != stack_b -> head)
 	{
 		find_minimum_greedy(stack_a, stack_b, min_moving);
-		rotate(stack_a, stack_b, min_moving);
-		reverse_rotate(stack_a, stack_b, min_moving);
+		rotate_stack(stack_a, stack_b, min_moving);
 		pa(stack_a, stack_b);
 		node = stack_b -> head -> prev;
 	}
-	move_min_value_to_top(stack_a);
-	return (0);
+	return (move_min_value_to_top(stack_a));
 }
