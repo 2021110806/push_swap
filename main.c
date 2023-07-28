@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 21:16:25 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 05:18:37 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 06:28:08 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ int	main(int argc, char *argv[])
 		node = stack_b -> head -> prev;
 	}
 	move_min_value_to_top(stack_a);
-	exit(0);
+	return (0);
 }

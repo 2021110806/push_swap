@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 00:59:56 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 03:24:09 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 06:07:27 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,11 @@ int					get_last(t_linked_list *list);
 int					error(void);
 int					min(t_linked_list *list);
 int					max(t_linked_list *list);
-int					partition(t_linked_list *stack_a, t_linked_list *stack_b);
-int					make_stack_to_idx(t_linked_list *list);
-int					sort(int *arr, int size);
-int					count_command_in_stack_a(int target, \
+void				partition(t_linked_list *stack_a, t_linked_list *stack_b);
+void				make_stack_to_idx(t_linked_list *list);
+void				count_command_in_stack_a(int target, \
 					t_linked_list *stack_a, t_moving_counter *moving_counter);
-int					count_command_in_stack_b(int idx, t_linked_list *stack_b, \
+void				count_command_in_stack_b(int idx, t_linked_list *stack_b, \
 					t_moving_counter *moving_counter);
 int					move_min_value_to_top(t_linked_list *stack_a);
 void				find_minimum_greedy(t_linked_list *stack_a, \
@@ -76,14 +75,18 @@ int					abs_(int inp);
 int					is_valid_input(char **argv, int argc, \
 					t_linked_list *stack_a);
 int					find_distance_to_min_value(t_linked_list *stack_a);
-int					match_idx_witch_contents(t_linked_list	*list, int *dct);
-int					count_command_when_target_is_min( \
+void				match_idx_witch_contents(t_linked_list	*list, int *dct);
+void				count_command_when_target_is_min( \
 					t_moving_counter *moving_counter, t_linked_list *stack_a);
-int					count_command_when_target_is_max( \
+void				count_command_when_target_is_max( \
 					t_moving_counter *moving_counter, t_linked_list *stack_a);
 int					count_command_when_target_is_top( \
 					t_moving_counter *moving_counter, t_linked_list *stack_a);
-int					count_command_when_general_case(t_linked_list *stack_a, \
+void				count_command_when_general_case(t_linked_list *stack_a, \
 					int target, t_moving_counter *moving_counter);
+void				update_moving_counter(\
+t_moving_counter *min_moving, t_moving_counter *moving_counter);
 int					is_sorted(t_linked_list *list);
+void				sort(int *arr, int size);
+void				match_idx_with_contents(t_linked_list	*list, int *dct);
 #endif

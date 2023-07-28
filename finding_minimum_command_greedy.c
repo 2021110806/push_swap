@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 22:57:27 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 05:21:32 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 06:01:35 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	sum_moving_counter(t_moving_counter *moving_counter)
 	return (return_value);
 }
 
-int	count_command_in_stack_a(int target, t_linked_list *stack_a, \
+void	count_command_in_stack_a(int target, t_linked_list *stack_a, \
 							t_moving_counter *moving_counter)
 {
 	moving_counter -> ra = 0;
@@ -32,7 +32,7 @@ int	count_command_in_stack_a(int target, t_linked_list *stack_a, \
 	moving_counter -> rb = 0;
 	moving_counter -> rrb = 0;
 	if (stack_a -> size == 1 || stack_a -> size == 0)
-		return (1);
+		return ;
 	else if (target <= min(stack_a))
 		count_command_when_target_is_min(moving_counter, stack_a);
 	else if (target >= max(stack_a))
@@ -48,17 +48,17 @@ int	count_command_in_stack_a(int target, t_linked_list *stack_a, \
 	}
 	else
 		count_command_when_general_case(stack_a, target, moving_counter);
-	return (1);
+	return ;
 }
 
-int	count_command_in_stack_b(int idx, t_linked_list *stack_b, \
+void	count_command_in_stack_b(int idx, t_linked_list *stack_b, \
 t_moving_counter *moving_counter)
 {
 	if (idx == stack_b -> size - 1)
 	{
 		moving_counter -> rrb = 1;
 		moving_counter -> rb = 0;
-		return (1);
+		return ;
 	}
 	if (idx <= stack_b -> size / 2)
 	{
@@ -70,7 +70,7 @@ t_moving_counter *moving_counter)
 		moving_counter -> rrb = stack_b -> size - (idx);
 		moving_counter -> rb = 0;
 	}
-	return (1);
+	return ;
 }
 
 void	update_moving_counter(\

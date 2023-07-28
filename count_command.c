@@ -6,13 +6,13 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 00:09:22 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 03:23:19 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 06:15:51 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	count_command_when_target_is_min(\
+void	count_command_when_target_is_min(\
 					t_moving_counter *moving_counter, t_linked_list *stack_a)
 {
 	int		cnt;
@@ -27,21 +27,20 @@ int	count_command_when_target_is_min(\
 			if (cnt < stack_a -> size / 2)
 			{
 				moving_counter -> ra = cnt + 1;
-				return (1);
+				return ;
 			}
 			else
 			{
 				moving_counter -> rra = stack_a -> size - (cnt + 1);
-				return (1);
+				return ;
 			}
 		}
 	cnt++;
 	node = node -> next;
 	}
-	return (1);
 }
 
-int	count_command_when_target_is_max(\
+void	count_command_when_target_is_max(\
 		t_moving_counter *moving_counter, t_linked_list *stack_a)
 {
 	t_node	*node;
@@ -56,18 +55,17 @@ int	count_command_when_target_is_max(\
 			if (cnt < stack_a -> size / 2)
 			{
 				moving_counter -> ra = cnt;
-				return (1);
+				return ;
 			}
 			else
 			{
 				moving_counter -> rra = stack_a -> size - (cnt);
-				return (1);
+				return ;
 			}
 		}
 	cnt++;
 	node = node -> next;
 	}
-	return (1);
 }
 
 int	count_command_when_target_is_top(\
@@ -97,7 +95,7 @@ int	count_command_when_target_is_top(\
 	return (0);
 }
 
-int	count_command_when_general_case(t_linked_list *stack_a, int target, \
+void	count_command_when_general_case(t_linked_list *stack_a, int target, \
 										t_moving_counter *moving_counter)
 {
 	t_node	*node;
@@ -117,10 +115,9 @@ int	count_command_when_general_case(t_linked_list *stack_a, int target, \
 				moving_counter -> ra = cnt + 1;
 			else
 				moving_counter -> rra = stack_a -> size - (cnt + 1);
-			return (1);
+			return ;
 		}
 		cnt++;
 		node = node -> next;
 	}
-	return (1);
 }

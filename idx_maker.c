@@ -6,13 +6,13 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 22:57:40 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 00:23:01 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 06:04:41 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	sort(int *arr, int size)
+void	sort(int *arr, int size)
 {
 	int	i;
 	int	j;
@@ -34,10 +34,10 @@ int	sort(int *arr, int size)
 		}
 		i++;
 	}
-	return (1);
+	return ;
 }
 
-int	match_idx_with_contents(t_linked_list	*list, int *dct)
+void	match_idx_with_contents(t_linked_list	*list, int *dct)
 {
 	t_node	*node;
 	int		i;
@@ -57,10 +57,10 @@ int	match_idx_with_contents(t_linked_list	*list, int *dct)
 		}
 		node = node -> next;
 	}
-	return (1);
+	return ;
 }
 
-int	make_stack_to_idx(t_linked_list *list)
+void	make_stack_to_idx(t_linked_list *list)
 {
 	t_node	*node;
 	int		*dct;
@@ -78,5 +78,5 @@ int	make_stack_to_idx(t_linked_list *list)
 	sort(dct, list -> size);
 	match_idx_with_contents(list, dct);
 	free(dct);
-	return (1);
+	return ;
 }
