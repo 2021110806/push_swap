@@ -6,13 +6,13 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 01:36:26 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 03:19:17 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 08:34:50 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	rotate(t_linked_list *stack_a, t_linked_list *stack_b, \
+void	rotate(t_linked_list *stack_a, t_linked_list *stack_b, \
 t_moving_counter *moving_counter)
 {
 	while (moving_counter -> ra > 0 && moving_counter -> rb > 0)
@@ -31,10 +31,9 @@ t_moving_counter *moving_counter)
 		rb(stack_b, 0);
 		moving_counter -> rb--;
 	}
-	return (1);
 }
 
-int	reverse_rotate(t_linked_list *stack_a, t_linked_list *stack_b, \
+void	reverse_rotate(t_linked_list *stack_a, t_linked_list *stack_b, \
 t_moving_counter *moving_counter)
 {
 	while (moving_counter -> ra > 0 && moving_counter -> rb > 0)
@@ -53,7 +52,13 @@ t_moving_counter *moving_counter)
 		rrb(stack_b, 0);
 		moving_counter -> rrb--;
 	}
-	return (1);
+}
+
+void	rotate_stack(t_linked_list *stack_a, t_linked_list *stack_b, \
+t_moving_counter *moving_counter)
+{
+	rotate(stack_a, stack_b, moving_counter);
+	reverse_rotate(stack_a, stack_b, moving_counter);
 }
 
 int	move_min_value_to_top(t_linked_list *stack_a)
@@ -68,11 +73,11 @@ int	move_min_value_to_top(t_linked_list *stack_a)
 		cnt ++;
 		while (--cnt)
 			ra(stack_a, 0);
-		return (1);
+		return (0);
 	}
 	cnt = stack_a -> size - cnt;
 	cnt ++;
 	while (--cnt)
 		rra(stack_a, 0);
-	return (1);
+	return (0);
 }

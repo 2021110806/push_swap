@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 21:17:00 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/27 22:34:27 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 06:44:08 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int					ft_isascii(int c);
 int					ft_isalpha(int c);
 int					ft_isalnum(int c);
 void				ft_bzero(void *s, size_t n);
-int					ft_atoi(const char *str);
+long long			ft_atoi(const char *str);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);

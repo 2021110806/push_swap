@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: minjeon2 <minjeon2@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 21:55:07 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/03/18 15:19:16 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 08:36:11 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
+long long	ft_atoi(const char *str)
 {
-	int	i;
-	int	minus;
-	int	return_value;
+	int			i;
+	int			minus;
+	long long	return_value;
 
 	i = 0;
 	minus = 1;
