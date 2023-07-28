@@ -6,13 +6,13 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 00:09:22 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 00:33:16 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 03:23:19 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	count_command_when_target_is_min(int target, \
+int	count_command_when_target_is_min(\
 					t_moving_counter *moving_counter, t_linked_list *stack_a)
 {
 	int		cnt;
@@ -41,7 +41,7 @@ int	count_command_when_target_is_min(int target, \
 	return (1);
 }
 
-int	count_command_when_target_is_max(int target, \
+int	count_command_when_target_is_max(\
 		t_moving_counter *moving_counter, t_linked_list *stack_a)
 {
 	t_node	*node;
@@ -70,7 +70,7 @@ int	count_command_when_target_is_max(int target, \
 	return (1);
 }
 
-int	count_command_when_target_is_top(int target,
+int	count_command_when_target_is_top(\
 	t_moving_counter *moving_counter, t_linked_list *stack_a)
 {
 	t_node	*node;

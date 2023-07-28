@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 00:59:56 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 02:41:14 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 03:24:09 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,11 @@ int					is_valid_input(char **argv, int argc, \
 					t_linked_list *stack_a);
 int					find_distance_to_min_value(t_linked_list *stack_a);
 int					match_idx_witch_contents(t_linked_list	*list, int *dct);
-int					count_command_when_target_is_min(int target, \
+int					count_command_when_target_is_min( \
 					t_moving_counter *moving_counter, t_linked_list *stack_a);
-int					count_command_when_target_is_max(int target, \
+int					count_command_when_target_is_max( \
 					t_moving_counter *moving_counter, t_linked_list *stack_a);
-int					count_command_when_target_is_top(int target, \
+int					count_command_when_target_is_top( \
 					t_moving_counter *moving_counter, t_linked_list *stack_a);
 int					count_command_when_general_case(t_linked_list *stack_a, \
 					int target, t_moving_counter *moving_counter);

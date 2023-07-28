@@ -6,13 +6,13 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 21:20:17 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 02:34:55 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 03:22:07 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	is_digit(int argc, char **argv, int idx)
+int	is_digit(char **argv, int idx)
 {
 	int	j;
 
@@ -34,7 +34,6 @@ int	is_digit(int argc, char **argv, int idx)
 int	is_valid_input(char **argv, int argc, t_linked_list *stack_a)
 {
 	int			i;
-	int			j;
 	long long	num;
 	t_node		*node;
 
@@ -43,7 +42,7 @@ int	is_valid_input(char **argv, int argc, t_linked_list *stack_a)
 		return (error());
 	while (i < argc)
 	{
-		if (!is_digit(argc, argv, i))
+		if (!is_digit(argv, i))
 			return (error());
 		if (ft_strlen(argv[i]) > 12)
 			return (error());

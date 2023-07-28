@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 01:55:25 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/27 22:45:54 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 03:18:56 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	ra(t_linked_list *stack_a, int is_rr)
 int	rb(t_linked_list *stack_b, int is_rr)
 {
 	t_node	*node;
-	int		item;
 
 	if (!stack_b || stack_b -> size == 0 || stack_b -> size == 1)
 		return (0);

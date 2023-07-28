@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 22:34:42 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 02:40:57 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 03:20:07 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ int	max(t_linked_list *list)
 int	is_sorted(t_linked_list *list)
 {
 	t_node	*node;
-	int		i;
 	int		ascending;
 
 	node = list -> head -> next;

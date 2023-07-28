@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 01:36:26 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 02:13:20 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 03:19:17 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ int	move_min_value_to_top(t_linked_list *stack_a)
 {
 	int		min_value;
 	int		cnt;
-	t_node	*node;
 
 	cnt = find_distance_to_min_value(stack_a);
 	min_value = min(stack_a);
