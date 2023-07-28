@@ -6,7 +6,7 @@
 #    By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/16 17:01:59 by minjeon2          #+#    #+#              #
-#    Updated: 2023/07/29 00:23:53 by minjeon2         ###   ########.fr        #
+#    Updated: 2023/07/29 02:41:24 by minjeon2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ LIBFT = ./libft/libft.a
 LIBFT_DIR = libft
 SRCS = circular_doubly_linked_list_1.c circular_doubly_linked_list_2.c push_command.c rotate_command.c \
 swap_command.c reverse_rotate_command.c main.c partitioning_stack.c finding_minimum_command_greedy.c idx_maker.c \
-stack_rotater.c utils.c input_checker.c count_command.c
+stack_rotater.c utils.c input_checker.c count_command.c error.c
 OBJS = $(SRCS:.c=.o)
 
 .PHONY : clean fclean re all bonus

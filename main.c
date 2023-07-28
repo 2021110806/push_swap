@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 21:16:25 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 01:55:16 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 02:40:34 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	main(int argc, char *argv[])
 	min_moving = malloc (sizeof (t_moving_counter));
 	if (!is_valid_input(argv, argc, stack_a))
 		return (1);
+	if (is_sorted(stack_a))
+		return (0);
 	make_stack_to_idx(stack_a);
 	partition(stack_a, stack_b);
 	node = stack_b -> head -> prev;

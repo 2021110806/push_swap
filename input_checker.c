@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 21:20:17 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 00:27:09 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 02:34:55 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	is_digit(int argc, char **argv, int idx)
 	if (argv[idx])
 	{
 		j = 0;
+		if (!argv[idx][j])
+			return (0);
 		while (argv[idx][j])
 		{
 			if (!ft_isdigit((int) argv[idx][j]))
