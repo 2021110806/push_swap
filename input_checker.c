@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 21:20:17 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 08:48:45 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 09:02:26 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	is_valid_input(char **argv, int argc, t_linked_list *stack_a)
 
 	i = 1;
 	if (argc == 1)
-		return (error());
+		return (0);
 	while (i < argc)
 	{
 		if (!is_digit(argv, i))
