@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 22:57:27 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 06:01:35 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/30 03:41:24 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,6 @@ void	count_command_in_stack_a(int target, t_linked_list *stack_a, \
 		count_command_when_target_is_min(moving_counter, stack_a);
 	else if (target >= max(stack_a))
 		count_command_when_target_is_max(moving_counter, stack_a);
-	else if (stack_a -> head -> prev != stack_a -> head && \
-	stack_a -> head -> next != stack_a -> head && ((stack_a \
-	-> head -> prev -> item > target && stack_a -> head -> \
-	next -> item < target) || (stack_a -> head -> prev -> item \
-	< target && stack_a -> head -> next -> item > target)))
-	{
-		if (!count_command_when_target_is_top(moving_counter, stack_a))
-			count_command_when_general_case(stack_a, target, moving_counter);
-	}
 	else
 		count_command_when_general_case(stack_a, target, moving_counter);
 	return ;

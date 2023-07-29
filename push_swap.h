@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 00:59:56 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 22:16:23 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/30 03:42:33 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,6 @@ void				match_idx_witch_contents(t_linked_list	*list, int *dct);
 void				count_command_when_target_is_min( \
 					t_moving_counter *moving_counter, t_linked_list *stack_a);
 void				count_command_when_target_is_max( \
-					t_moving_counter *moving_counter, t_linked_list *stack_a);
-int					count_command_when_target_is_top( \
 					t_moving_counter *moving_counter, t_linked_list *stack_a);
 void				count_command_when_general_case(t_linked_list *stack_a, \
 					int target, t_moving_counter *moving_counter);

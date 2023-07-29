@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 00:09:22 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 06:15:51 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/30 03:41:46 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,33 +66,6 @@ void	count_command_when_target_is_max(\
 	cnt++;
 	node = node -> next;
 	}
-}
-
-int	count_command_when_target_is_top(\
-	t_moving_counter *moving_counter, t_linked_list *stack_a)
-{
-	t_node	*node;
-	int		gap1;
-	int		gap2;
-
-	gap1 = abs_ (stack_a->head->prev->item - stack_a->head->next->item);
-	gap2 = 2147483647;
-	node = stack_a -> head -> next;
-	while (node != stack_a -> head)
-	{
-		if (node -> next != stack_a -> head && gap2 > \
-		abs_(node -> item - node -> next -> item) && \
-		abs_(node -> item - node -> next -> item) != 1)
-			gap2 = abs_(node -> item - node -> next -> item);
-		node = node -> next;
-	}
-	if (gap2 > gap1)
-	{
-		moving_counter -> rb = 0;
-		moving_counter -> rrb = 0;
-		return (1);
-	}
-	return (0);
 }
 
 void	count_command_when_general_case(t_linked_list *stack_a, int target, \

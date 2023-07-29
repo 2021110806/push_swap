@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 06:52:54 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 22:09:56 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/30 02:45:06 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@ int	sort_when_size_is_two(t_linked_list *stack_a)
 {
 	if (!stack_a)
 		return (1);
-	if (stack_a -> head -> prev < stack_a -> head -> next -> next)
+	if (stack_a -> head -> prev -> item < \
+	stack_a -> head -> next -> item)
 		sa(stack_a);
-	return (1);
+	return (0);
 }
 
 int	sort_when_size_is_three(t_linked_list *stack_a)
 {
 	t_node	*head;
 
+	if (!is_sorted(stack_a))
+		return (0);
 	head = stack_a -> head;
 	if (head -> next -> item < head -> prev -> item && \
 		head -> next -> item < head -> next -> next -> item)
@@ -39,7 +42,7 @@ int	sort_when_size_is_three(t_linked_list *stack_a)
 		else
 			ra(stack_a, 0);
 	}
-	return (1);
+	return (0);
 }
 
 int	sort_when_size_is_four(t_linked_list *stack_a, t_linked_list *stack_b)
@@ -50,7 +53,7 @@ int	sort_when_size_is_four(t_linked_list *stack_a, t_linked_list *stack_b)
 	pb(stack_a, stack_b);
 	sort_when_size_is_three(stack_a);
 	pa(stack_a, stack_b);
-	return (1);
+	return (0);
 }
 
 int	sort_when_size_is_five(t_linked_list *stack_a, t_linked_list *stack_b)
@@ -64,7 +67,7 @@ int	sort_when_size_is_five(t_linked_list *stack_a, t_linked_list *stack_b)
 	sort_when_size_is_three(stack_a);
 	pa(stack_a, stack_b);
 	pa(stack_a, stack_b);
-	return (1);
+	return (0);
 }
 
 int	sort_when_input_is_few(t_linked_list *stack_a, t_linked_list *stack_b)

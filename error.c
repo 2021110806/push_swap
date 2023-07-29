@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 02:39:12 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 02:42:39 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/30 02:45:59 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	error(void)
 {
-	ft_putstr_fd("Error", 1);
+	ft_putstr_fd("Error\n", 2);
 	return (0);
 }
