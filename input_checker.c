@@ -6,7 +6,7 @@
 /*   By: minjeon2 <qwer10897@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 21:20:17 by minjeon2          #+#    #+#             */
-/*   Updated: 2023/07/29 09:02:26 by minjeon2         ###   ########.fr       */
+/*   Updated: 2023/07/29 22:27:26 by minjeon2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	is_digit(char **argv, int idx)
 			if (argv[idx][j] == '-')
 			{
 				if (j != 0)
+					return (0);
+				if (ft_strlen(argv[idx]) == 1)
 					return (0);
 			}
 			else
